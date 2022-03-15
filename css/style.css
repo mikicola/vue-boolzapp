@@ -81,3 +81,43 @@ body{
     width: calc(100% - 30%);
     height: 100%;
 }
+.notice-banner{
+    background-color: #8edafc;
+    padding: .5rem;
+}
+
+.notice-banner .circle-container{
+    background-color: white;
+    border-radius: 50%;
+    padding: .3rem;
+}
+
+.notice-banner .circle-container i{
+    color: #8edafc;
+    font-size: 1.3rem;
+}
+
+.notice-banner .text span{
+    display: block;
+}
+
+.search-bar{
+    border: 1px solid lightgray;
+    margin: .5rem;
+}
+
+.search-bar form input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    padding: 1rem;
+}
+
+.search-bar form i{
+    color: lightgrey;
+}
+
+.search-bar .fa{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: #8edafc;
+}
