@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    height: 100vh;
+    background-color: #dadbd4;
+}
+
+.backgroung-top-green{
+    background-color: #009688;
+    height: calc(100vh - 85%);
+}
