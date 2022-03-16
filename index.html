@@ -77,14 +77,14 @@
                         </div> -->
                         
                         <!-- 'img/avatar' + conversations[i].contactImg + '.jpg' -->
-                        <div v-for="(contact, i) in conversations" class="contact flex">
+                        <div @click="functionActiveChat(i)"  v-for="(contact, i) in conversations" :class="(i == activeChat) ? 'active' : '' " class="contact flex" >
                             <img class="contact-img" :src="'img/avatar' + conversations[i].contactImg + '.jpg'" alt="">
 
                             <div class="info">
                                 <div :class="name">{{ contact.name }}</div>
                                 <div class="last-message">{{ contact.messages[2].message }}</div>
                             </div>
-                            <div class="time">12:00</div>
+                            <div class="time">{{ contact.time }}</div>
                         </div>
 
                     </div>
@@ -96,9 +96,9 @@
                     <div class="messages-container">
                         <div class="header flex">
                             <div class="selected-contact flex">
-                                <img class="img-user" src="img/avatar_1.jpg" alt="avatar">
+                                <img class="img-user" :src="'img/avatar' + conversations[activeChat].contactImg + '.jpg'" alt="avatar">
                                 <div class="info">
-                                    <div class="name">Michele</div>
+                                    <div class="name">{{ conversations[activeChat].name }}</div>
                                     <div class="last-access">Ultimo accesso oggi all 12:00</div>
                                 </div>
                             </div>

@@ -11,15 +11,18 @@ Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente r
 var app = new Vue({
     el: '#app',
     data:{
-        currentConversation: 0,
+        text: '', //per messaggi ANCORA DA FARE
+
+        activeChat: 0,
+
         conversations:[
             {
                 name: 'Michele',
                 contactImg: '_1',
-                // contactImg: 'img/avatar_1.jpg',
+                time: '12:00',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '10/01/2020 15:30:55', //da mettere sul messaggio
                     message: 'si si',
                     status: 'sent',
                     },
@@ -39,6 +42,7 @@ var app = new Vue({
             {
                 name: 'Francesco',
                 contactImg: '_2',
+                time: '12:57',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -61,6 +65,7 @@ var app = new Vue({
             {
                 name: 'Gianni',
                 contactImg: '_3',
+                time: '17:00',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -83,6 +88,7 @@ var app = new Vue({
             {
                 name: 'Melissona',
                 contactImg: '_4',
+                time: '02:00',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -105,6 +111,7 @@ var app = new Vue({
             {
                 name: 'Berlusconi',
                 contactImg: '_5',
+                time: '07:00',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -127,6 +134,7 @@ var app = new Vue({
             {
                 name: 'Silvia',
                 contactImg: '_6',
+                time: '01:00',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -149,6 +157,7 @@ var app = new Vue({
             {
                 name: 'Prugna',
                 contactImg: '_7',
+                time: '12:00',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -171,6 +180,7 @@ var app = new Vue({
             {
                 name: 'Fragola',
                 contactImg: '_8',
+                time: '14:00',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -190,5 +200,11 @@ var app = new Vue({
                 ]
             },
         ]
-    } 
+    } ,
+    methods:{
+        functionActiveChat(i) {
+            this.activeChat = i;
+        }
+
+    }
 })
