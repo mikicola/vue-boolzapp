@@ -11,179 +11,181 @@ Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente r
 var app = new Vue({
     el: '#app',
     data:{
+        currentConversation: 0,
         conversations:[
             {
-                nome: 'Michele',
-                contactImg: '../img/avatar_1.jpg',
+                name: 'Michele',
+                contactImg: '_1',
+                // contactImg: 'img/avatar_1.jpg',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'si si',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'no no',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Certo!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Francesco',
-                contactImg: '../img/avatar_2.jpg',
+                name: 'Francesco',
+                contactImg: '_2',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
-                    message: "Hai portato a spasso l' orso?",
-                    status: 'sent'
+                    message: "Hai portato a spasso l'orso?",
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati lavare la lavastoviglie',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Gianni',
-                contactImg: '../img/avatar_3.jpg',
+                name: 'Gianni',
+                contactImg: '_3',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
-                    message: 'Tutto fatto!',
-                    status: 'received'
+                    message: 'non mi va',
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Melissona',
-                contactImg: '../img/avatar_4.jpg',
+                name: 'Melissona',
+                contactImg: '_4',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Berlusconi',
-                contactImg: '../img/avatar_5.jpg',
+                name: 'Berlusconi',
+                contactImg: '_5',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Silvia',
-                contactImg: '../img/avatar_6.jpg',
+                name: 'Silvia',
+                contactImg: '_6',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Prugna',
-                contactImg: '../img/avatar_7.jpg',
+                name: 'Prugna',
+                contactImg: '_7',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },
 
             {
-                nome: 'Fragola',
-                contactImg: '../img/avatar_8.jpg',
+                name: 'Fragola',
+                contactImg: '_8',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent'
+                    status: 'sent',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
                     }
                 ]
             },

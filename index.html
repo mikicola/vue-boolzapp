@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="contacts-container flex-column">
-                        <div class="contact active flex">
+                        <!-- <div class="contact active flex">
                             <img class="contact-img" src="img/avatar_1.jpg" alt="">
 
                             <div class="info">
@@ -72,6 +72,17 @@
                             <div class="info">
                                 <div class="name">Michele</div>
                                 <div class="last-message">Arrivedorci!</div>
+                            </div>
+                            <div class="time">12:00</div>
+                        </div> -->
+                        
+                        <!-- 'img/avatar' + conversations[i].contactImg + '.jpg' -->
+                        <div v-for="(contact, i) in conversations" class="contact flex">
+                            <img class="contact-img" :src="'img/avatar' + conversations[i].contactImg + '.jpg'" alt="">
+
+                            <div class="info">
+                                <div :class="name">{{ contact.name }}</div>
+                                <div class="last-message">{{ contact.messages[2].message }}</div>
                             </div>
                             <div class="time">12:00</div>
                         </div>
