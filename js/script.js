@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data:{
         newMessage:{
-            message: '', //per messaggi ANCORA DA FARE
+            message: '',
             sent: 'true',
         },
 
@@ -198,10 +198,25 @@ var app = new Vue({
         functionActiveChat(i) {
             this.activeChat = i;
         },
-        postMessage(){
+
+
+
+        postSentMessage(){
             const newMessage = {...this.newMessage};
-            this.conversations[this.activeChat].messages.push(newMessage);
+            this.postPushMessage(newMessage);
+            this.newMessage.message = '';
+            setTimeout(this.postReply, 1000);
         },
+        
+        postPushMessage(message){
+            this.conversations[this.activeChat].messages.push(message); 
+        },
+        postReply(){
+            this.postPushMessage({
+                message: 'ok',
+                sent: 'false',
+            })
+        }
     }
 })
 

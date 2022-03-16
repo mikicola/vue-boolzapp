@@ -124,13 +124,13 @@
 
                         <div class="insert-message flex">
                             <i class="fa-solid fa-face-smile"></i>
-                            <!-- <textarea name="write-message" id="write-message" placeholder="Scrivi un messaggio"></textarea> -->
+                           
                             <input 
                             type="text" 
                             class="textarea" 
                             placeholder="Scrivi un messaggio" 
                             v-model="newMessage.message"
-                            @keyup.enter="postMessage" />
+                            @keyup.enter="postSentMessage" />
 
                             <i class="fa-solid fa-microphone"></i>
                         </div>
