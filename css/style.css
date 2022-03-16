@@ -166,21 +166,23 @@ body{
     background-image: url("../img/mine.jpg");
 }
 
-.messages-container .my-message{
+.messages-container .my-message{ /* classe messaggi miei */
     background-color: #d5f9ba;
 }
-.messages-container .recived-message{
+.messages-container .recived-message{ /* classe messaggi ricevuti */
     background-color: #ffffff;
 }
 
-.messages-container .my-message,
-.messages-container .recived-message{
+.messages-container .message{ /* classe comune messaggi  */
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
 }
 
-
+.messages-container .conversation .time{
+    font-size: .7em;
+    color: rgb(161, 161, 161);
+}
 
 
 .messages-container .insert-message{

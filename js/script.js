@@ -1,13 +1,3 @@
-/*
-Milestone 2
-Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-Click sul contatto mostra la conversazione del contatto cliccato
-
-Milestone 3
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-*/
-
 var app = new Vue({
     el: '#app',
     data:{
@@ -24,17 +14,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55', //da mettere sul messaggio
                     message: 'si si',
-                    status: 'sent',
+                    sent: 'true', //io
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'no no',
-                    status: 'sent',
+                    sent: 'true', //io
                     },
                     {
                     date: '10/01/2020 16:15:22',
-                    message: 'Certo!',
-                    status: 'received',
+                    message: 'Certo, come no!',
+                    sent: 'false', //contatto
                     }
                 ]
             },
@@ -47,17 +37,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: "Hai portato a spasso l'orso?",
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati lavare la lavastoviglie',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -70,17 +60,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'non mi va',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -93,17 +83,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -116,17 +106,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -139,17 +129,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -162,17 +152,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -185,17 +175,17 @@ var app = new Vue({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    status: 'sent',
+                    sent: 'true',
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received',
+                    sent: 'false',
                     }
                 ]
             },
@@ -208,3 +198,13 @@ var app = new Vue({
 
     }
 })
+
+/*
+Milestone 2
+Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+Click sul contatto mostra la conversazione del contatto cliccato
+
+Milestone 3
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+*/

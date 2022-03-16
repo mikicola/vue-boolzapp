@@ -109,16 +109,18 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-
+                        
+                        <!-- :class="{ my-message: messages.sent, recived-message: !messages.sent }"  -->
                         <div class="conversation">
-                            <div class="my-message">
-                                si si
-                                <div class="time"></div>
+                            
+                            <div v-for="messages in conversations[activeChat].messages" 
+                            
+                            class="message">{{ messages.message }}<div class="time">mm</div>
                             </div>
-                            <div class="recived-message">
+                            <!-- <div class="recived-message">
                                 no no
                                 <div class="time"></div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="insert-message flex">
