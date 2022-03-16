@@ -110,12 +110,11 @@
                             </div>
                         </div>
                         
-                        <!-- :class="{ my-message: messages.sent, recived-message: !messages.sent }"  -->
+                        <!-- :class="{my-message: message.sent, recived-message: !message.sent}"  TOFIX-->
                         <div class="conversation">
                             
-                            <div v-for="messages in conversations[activeChat].messages" 
-                            
-                            class="message">{{ messages.message }}<div class="time">mm</div>
+                            <div v-for="message in conversations[activeChat].messages"      
+                            class="message">{{ message.message }}<div class="time">{{ message.date }}</div>
                             </div>
                             <!-- <div class="recived-message">
                                 no no
@@ -125,7 +124,14 @@
 
                         <div class="insert-message flex">
                             <i class="fa-solid fa-face-smile"></i>
-                            <textarea name="write-message" id="write-message" placeholder="Scrivi un messaggio"></textarea>
+                            <!-- <textarea name="write-message" id="write-message" placeholder="Scrivi un messaggio"></textarea> -->
+                            <input 
+                            type="text" 
+                            class="textarea" 
+                            placeholder="Scrivi un messaggio" 
+                            v-model="newMessage.message"
+                            @keyup.enter="postMessage" />
+
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>

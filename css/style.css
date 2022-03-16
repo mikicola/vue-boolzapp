@@ -197,7 +197,8 @@ body{
     cursor: pointer;
 }
 
-.messages-container .insert-message textarea{
+.messages-container .insert-message .textarea{
+    padding: .5rem;
     border: none;
     margin: .5rem .5rem;
     width: 80%;

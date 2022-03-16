@@ -1,7 +1,10 @@
 var app = new Vue({
     el: '#app',
     data:{
-        text: '', //per messaggi ANCORA DA FARE
+        newMessage:{
+            message: '', //per messaggi ANCORA DA FARE
+            sent: 'true',
+        },
 
         activeChat: 0,
 
@@ -194,8 +197,11 @@ var app = new Vue({
     methods:{
         functionActiveChat(i) {
             this.activeChat = i;
-        }
-
+        },
+        postMessage(){
+            const newMessage = {...this.newMessage};
+            this.conversations[this.activeChat].messages.push(newMessage);
+        },
     }
 })
 
