@@ -42,7 +42,8 @@ body{
 }
 
 .left-side{
-    background-color: rgb(197, 197, 255);
+    /* background-color: rgb(197, 197, 255); */
+    background-color: white;
     width: calc(100% - 70%);
     height: 100%;
 }
@@ -59,7 +60,8 @@ body{
     cursor: pointer;
 }
 
-.header .img-user{
+.header .img-user,
+.contact .contact-img{
     width: 50px;
     border-radius: 50%;
     margin: .3rem;
@@ -120,4 +122,43 @@ body{
 .search-bar .fa{
     /* font-family: Arial, Helvetica, sans-serif; */
     color: #8edafc;
+}
+
+.contact{
+    /* align-items: center; */
+    cursor: pointer;
+    border-bottom: 1px solid lightgray;
+    position: relative; 
+}
+
+/* .contact active */
+.active{
+    background-color: #e9ebeb;
+}
+
+.contact .info,
+.selected-contact .info{
+    padding-top: .5rem;
+}
+
+.contact .last-message,
+.contact .time,
+.selected-contact .last-access{
+    font-size: .7em;
+    color: #b1b1b1;
+}
+
+.contact .time{
+    position: absolute;
+    top:5px;
+    right: 5px;
+}
+
+
+
+/* PARTE DESTRA  */
+.messages-container{
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/mine.jpg");
 }

@@ -18,7 +18,7 @@
 
 
             <div id="app" class="main-app flex">
-<!-- parte sinistra -->
+                <!-- parte sinistra -->
                 <div class="left-side flex-column">
                     <header class="header flex">
                         <div class="user flex">
@@ -46,28 +46,67 @@
                     <!-- search bar  -->
                     <div class="search-bar">
                         <form>
-                            
+
                             <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
 
                             <!-- <input type="text" class = "fa" placeholder="&#xF002; Cerca o inizia una nuova chat" name="search">  <-- funziona ma font pazzerello -->
-                           
+
                         </form>
-                       
+
                     </div>
 
-                    <div class="contacts-container"></div>
+                    <div class="contacts-container flex-column">
+                        <div class="contact active flex">
+                            <img class="contact-img" src="img/avatar_1.jpg" alt="">
+
+                            <div class="info">
+                                <div class="name">Michele</div>
+                                <div class="last-message">Arrivedorci!</div>
+                            </div>
+                            <div class="time">12:00</div>
+                        </div>
+
+                        <div class="contact flex">
+                            <img class="contact-img" src="img/avatar_1.jpg" alt="">
+
+                            <div class="info">
+                                <div class="name">Michele</div>
+                                <div class="last-message">Arrivedorci!</div>
+                            </div>
+                            <div class="time">12:00</div>
+                        </div>
+
+                    </div>
                 </div>
 
 
-<!-- parte destra -->
+                <!-- parte destra -->
                 <div class="right-side">
-                    <div class="messages-container"></div>
+                    <div class="messages-container">
+                        <div class="header flex">
+                            <div class="selected-contact flex">
+                                <img class="img-user" src="img/avatar_1.jpg" alt="avatar">
+                                <div class="info">
+                                    <div class="name">Michele</div>
+                                    <div class="last-access">Ultimo accesso oggi all 12:00</div>
+                                </div>
+                            </div>
+    
+                            <div class="header-icons">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
 
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
