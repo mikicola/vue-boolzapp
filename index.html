@@ -23,7 +23,7 @@
                     <header class="header flex">
                         <div class="user flex">
                             <img class="img-user" src="img/avatar_io.jpg" alt="avatar">
-                            <span class="user-name">Sofia</span>
+                            <span class="user-name">Io, non Sofia</span>
                         </div>
 
                         <div class="header-icons">
@@ -75,9 +75,10 @@
                             </div>
                             <div class="time">12:00</div>
                         </div> -->
-                        
+
                         <!-- 'img/avatar' + conversations[i].contactImg + '.jpg' -->
-                        <div @click="functionActiveChat(i)"  v-for="(contact, i) in conversations" :class="(i == activeChat) ? 'active' : '' " class="contact flex" >
+                        <div @click="functionActiveChat(i)" v-for="(contact, i) in conversations"
+                            :class="(i == activeChat) ? 'active' : '' " class="contact flex">
                             <img class="contact-img" :src="'img/avatar' + conversations[i].contactImg + '.jpg'" alt="">
 
                             <div class="info">
@@ -96,41 +97,42 @@
                     <div class="messages-container">
                         <div class="header flex">
                             <div class="selected-contact flex">
-                                <img class="img-user" :src="'img/avatar' + conversations[activeChat].contactImg + '.jpg'" alt="avatar">
+                                <img class="img-user"
+                                    :src="'img/avatar' + conversations[activeChat].contactImg + '.jpg'" alt="avatar">
                                 <div class="info">
                                     <div class="name">{{ conversations[activeChat].name }}</div>
                                     <div class="last-access">Ultimo accesso oggi all 12:00</div>
                                 </div>
                             </div>
-    
+
                             <div class="header-icons">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <i class="fa-solid fa-paperclip"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        
+
                         <!-- :class="{my-message: message.sent, recived-message: !message.sent}"  TOFIX-->
                         <div class="conversation">
+
                             
-                            <div v-for="message in conversations[activeChat].messages"      
-                            class="message">{{ message.message }}<div class="time">{{ message.date }}</div>
+                            
+                            <!-- my-message
+                            recived-message -->
+
+                            <div v-for="message in conversations[activeChat].messages" 
+                            :class="(message.sent == true) ? 'my-message' : 'recived-message'"
+                            class="message">{{
+                                message.message }}<div class="time">{{ message.date }}</div>
                             </div>
-                            <!-- <div class="recived-message">
-                                no no
-                                <div class="time"></div>
-                            </div> -->
+                           
                         </div>
 
                         <div class="insert-message flex">
                             <i class="fa-solid fa-face-smile"></i>
-                           
-                            <input 
-                            type="text" 
-                            class="textarea" 
-                            placeholder="Scrivi un messaggio" 
-                            v-model="newMessage.message"
-                            @keyup.enter="postSentMessage" />
+
+                            <input type="text" class="textarea" placeholder="Scrivi un messaggio"
+                            v-model="newMessage.message" @keyup.enter="postSentMessage" />
 
                             <i class="fa-solid fa-microphone"></i>
                         </div>
