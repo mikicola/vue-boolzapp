@@ -46,8 +46,8 @@
                     <!-- search bar  -->
                     <div class="search-bar">
                         <form>
-
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                            <input type="text" @keyup="functionSearchName" v-model="searchName"  placeholder="Cerca o inizia una nuova chat" name="search">
 
                             <!-- <input type="text" class = "fa" placeholder="&#xF002; Cerca o inizia una nuova chat" name="search">  <-- funziona ma font pazzerello -->
 
@@ -56,28 +56,9 @@
                     </div>
 
                     <div class="contacts-container flex-column">
-                        <!-- <div class="contact active flex">
-                            <img class="contact-img" src="img/avatar_1.jpg" alt="">
-
-                            <div class="info">
-                                <div class="name">Michele</div>
-                                <div class="last-message">Arrivedorci!</div>
-                            </div>
-                            <div class="time">12:00</div>
-                        </div>
-
-                        <div class="contact flex">
-                            <img class="contact-img" src="img/avatar_1.jpg" alt="">
-
-                            <div class="info">
-                                <div class="name">Michele</div>
-                                <div class="last-message">Arrivedorci!</div>
-                            </div>
-                            <div class="time">12:00</div>
-                        </div> -->
-
-                        <!-- 'img/avatar' + conversations[i].contactImg + '.jpg' -->
-                        <div @click="functionActiveChat(i)" v-for="(contact, i) in conversations"
+                        
+                        <div @click="functionActiveChat(i)" v-for="(contact, i) in conversations" 
+                        v-if="contact.visible"
                             :class="(i == activeChat) ? 'active' : '' " class="contact flex">
                             <img class="contact-img" :src="'img/avatar' + conversations[i].contactImg + '.jpg'" alt="">
 
@@ -114,12 +95,7 @@
 
                         <!-- :class="{my-message: message.sent, recived-message: !message.sent}"  TOFIX-->
                         <div class="conversation">
-
                             
-                            
-                            <!-- my-message
-                            recived-message -->
-
                             <div v-for="message in conversations[activeChat].messages" 
                             :class="(message.sent == true) ? 'my-message' : 'recived-message'"
                             class="message">{{

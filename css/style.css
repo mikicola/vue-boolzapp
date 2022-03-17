@@ -179,6 +179,10 @@ body{
     margin: 1rem;
 }
 
+.messages-container .conversation{
+    padding: 1rem 5rem;
+}
+
 .messages-container .conversation .time{
     font-size: .7em;
     color: rgb(161, 161, 161);

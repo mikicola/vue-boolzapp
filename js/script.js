@@ -1,9 +1,10 @@
 var app = new Vue({
     el: '#app',
     data:{
+        // searchName:'',
         newMessage:{
             message: '',
-            sent: 'true',
+            sent: true,
         },
 
         activeChat: 0,
@@ -13,21 +14,22 @@ var app = new Vue({
                 name: 'Michele',
                 contactImg: '_1',
                 time: '12:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'si si',
-                    sent: 'true', //io
+                    sent: true, //io
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'no no',
-                    sent: 'true', //io
+                    sent: true, //io
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Certo, come no!',
-                    sent: 'false', //contatto
+                    sent: false, //contatto
                     }
                 ]
             },
@@ -36,21 +38,22 @@ var app = new Vue({
                 name: 'Francesco',
                 contactImg: '_2',
                 time: '12:57',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: "Hai portato a spasso l'orso?",
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati lavare la lavastoviglie',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -59,21 +62,22 @@ var app = new Vue({
                 name: 'Gianni',
                 contactImg: '_3',
                 time: '17:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'non mi va',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -82,21 +86,22 @@ var app = new Vue({
                 name: 'Melissona',
                 contactImg: '_4',
                 time: '02:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -105,21 +110,22 @@ var app = new Vue({
                 name: 'Berlusconi',
                 contactImg: '_5',
                 time: '07:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -128,21 +134,22 @@ var app = new Vue({
                 name: 'Silvia',
                 contactImg: '_6',
                 time: '01:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -151,21 +158,22 @@ var app = new Vue({
                 name: 'Prugna',
                 contactImg: '_7',
                 time: '12:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -174,21 +182,22 @@ var app = new Vue({
                 name: 'Fragola',
                 contactImg: '_8',
                 time: '14:00',
+                visible: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di stendere i panni',
-                    sent: 'true',
+                    sent: true,
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    sent: 'false',
+                    sent: false,
                     }
                 ]
             },
@@ -214,22 +223,22 @@ var app = new Vue({
         postReply(){
             this.postPushMessage({
                 message: 'ok',
-                sent: 'false',
+                sent: false,
+            })
+        },
+        functionSearchName(){
+            this.conversations.forEach((item) =>{
+                if (item.name.toLowerCase().includes(this.searchName.toLowerCase())){
+                    item.visible = true;
+                } else{
+                    item.visible = false;
+                }
             })
         },
     }
 })
 
 /*
-Milestone 2
-Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-Click sul contatto mostra la conversazione del contatto cliccato
-
-Milestone 3
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-
-
 Milestone 4
 Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina) 
 
