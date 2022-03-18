@@ -100,18 +100,18 @@ var app = new Vue({
                 messages: [
                     {
                     date: '2020/10/01 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
+                    message: 'Hai portato a spasso il topo?',
                     sent: true,
                     },
                     {
                     date: '2020/10/01 15:50:00',
-                    message: 'Ricordati di stendere i panni',
-                    sent: true,
+                    message: 'Certo, come tutti i giorni...',
+                    sent: false,
                     },
                     {
                     date: '2020/10/01 16:15:22',
-                    message: 'Tutto fatto!',
-                    sent: false,
+                    message: 'interessante!',
+                    sent: true,
                     }
                 ]
             },
@@ -124,19 +124,19 @@ var app = new Vue({
                 messages: [
                     {
                     date: '2020/10/01 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
-                    sent: true,
+                    message: 'Mi consenta!',
+                    sent: false,
                     },
                     {
                     date: '2020/10/01 15:50:00',
-                    message: 'Ricordati di stendere i panni',
+                    message: 'Sei sempre sul pezzo',
                     sent: true,
                     },
-                    {
-                    date: '2020/10/01 16:15:22',
-                    message: 'Tutto fatto!',
-                    sent: false,
-                    }
+                    // {
+                    // date: '2020/10/01 16:15:22',
+                    // message: 'Tutto fatto!',
+                    // sent: false,
+                    // }
                 ]
             },
 
@@ -172,17 +172,17 @@ var app = new Vue({
                 messages: [
                     {
                     date: '2020/10/01 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
+                    message: 'Hai comprato le prugne?',
                     sent: true,
                     },
                     {
                     date: '2020/10/01 15:50:00',
-                    message: 'Ricordati di stendere i panni',
+                    message: 'Ricordati di chiamare Fragola!',
                     sent: true,
                     },
                     {
                     date: '2020/10/01 16:15:22',
-                    message: 'Tutto fatto!',
+                    message: 'Ho comprato solo i lamponi!',
                     sent: false,
                     }
                 ]
@@ -196,19 +196,19 @@ var app = new Vue({
                 messages: [
                     {
                     date: '2020/10/01 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
-                    sent: true,
-                    },
-                    {
-                    date: '2020/10/01 15:50:00',
-                    message: 'Ricordati di stendere i panni',
-                    sent: true,
-                    },
-                    {
-                    date: '2020/10/01 16:15:22',
-                    message: 'Tutto fatto!',
+                    message: 'Prugna ancora non mi ha chiamato...',
                     sent: false,
-                    }
+                    },
+                    // {
+                    // date: '2020/10/01 15:50:00',
+                    // message: 'Ricordati di stendere i panni',
+                    // sent: true,
+                    // },
+                    // {
+                    // date: '2020/10/01 16:15:22',
+                    // message: 'Tutto fatto!',
+                    // sent: false,
+                    // }
                 ]
             },
         ]
