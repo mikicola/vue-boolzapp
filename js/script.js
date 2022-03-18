@@ -1,7 +1,9 @@
 var app = new Vue({
     el: '#app',
     data:{
+        // selectedMessage: 0,
         // searchName:'',
+        visible: true,
         newMessage:{
             message: '',
             sent: true,
@@ -17,20 +19,23 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'si si',
                     sent: true, //io
-                    },
+                    // menuDropDown: false,
+                },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'no no',
                     sent: true, //io
-                    },
+                    // menuDropDown: false,
+                },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Certo, come no!',
                     sent: false, //contatto
-                    }
+                    // menuDropDown: false,
+                }
                 ]
             },
 
@@ -41,17 +46,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: "Hai portato a spasso l'orso?",
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati lavare la lavastoviglie',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -65,17 +70,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'non mi va',
                     sent: false,
                     }
@@ -89,17 +94,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -113,17 +118,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -137,17 +142,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -161,17 +166,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -185,17 +190,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '2020/10/01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '2020/10/01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '2020/10/01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -209,14 +214,12 @@ var app = new Vue({
         },
 
 
-
         postSentMessage(){
             const newMessage = {...this.newMessage};
             this.postPushMessage(newMessage);
             this.newMessage.message = '';
             setTimeout(this.postReply, 1000);
         },
-        
         postPushMessage(message){
             this.conversations[this.activeChat].messages.push(message); 
         },
@@ -226,6 +229,8 @@ var app = new Vue({
                 sent: false,
             })
         },
+
+
         functionSearchName(){
             this.conversations.forEach((item) =>{
                 if (item.name.toLowerCase().includes(this.searchName.toLowerCase())){
@@ -235,13 +240,30 @@ var app = new Vue({
                 }
             })
         },
+
+        //non funziona bene TOFIX
+        deleteMessage(index) {
+            this.conversations[this.activeChat].messages.splice(index, 1)
+        },
+        menuDeleteVisible(index) {
+            if (this.visible == true) {
+                this.visible = this.conversations[this.activeChat].messages[index]
+            }
+            else {
+                this.visible = true
+            }
+        }, 
+        
+
+/*
+        deleteMessage(i) {
+            this.conversations[this.activeChat].messages.splice(i, 1);
+        },
+        */
     }
 })
 
 /*
-Milestone 4
-Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina) 
-
 Milestone 5
 Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
