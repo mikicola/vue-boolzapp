@@ -11,6 +11,11 @@ var app = new Vue({
 
         activeChat: 0,
 
+        mainUser:{
+            name: 'Michela',
+            contactImg: '_io',
+        },
+
         conversations:[
             {
                 name: 'Michele',

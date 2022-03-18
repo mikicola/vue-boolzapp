@@ -22,8 +22,8 @@
                 <div class="left-side flex-column">
                     <header class="header flex">
                         <div class="user flex">
-                            <img class="img-user" src="img/avatar_io.jpg" alt="avatar">
-                            <span class="user-name">Io, non Sofia</span>
+                            <img class="img-user" :src="'img/avatar' + mainUser.contactImg + '.jpg'" alt="avatar">
+                            <span class="user-name">{{ mainUser.name }}</span>
                         </div>
 
                         <div class="header-icons">
@@ -45,26 +45,23 @@
 
                     <!-- search bar  -->
                     <div class="search-bar">
-                        <form>
-                            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                            <input type="text" @keyup="functionSearchName" v-model="searchName"  placeholder="Cerca o inizia una nuova chat" name="search">
-
-                            <!-- <input type="text" class = "fa" placeholder="&#xF002; Cerca o inizia una nuova chat" name="search">  <-- funziona ma font pazzerello -->
-
+                        <form class="flex">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" @keyup="functionSearchName" v-model="searchName"
+                                placeholder="Cerca o inizia una nuova chat" name="search">
                         </form>
 
                     </div>
 
                     <div class="contacts-container flex-column">
-                        
-                        <div @click="functionActiveChat(i)" v-for="(contact, i) in conversations" 
-                        v-if="contact.visible"
+
+                        <div @click="functionActiveChat(i)" v-for="(contact, i) in conversations" v-if="contact.visible"
                             :class="(i == activeChat) ? 'active' : '' " class="contact flex">
                             <img class="contact-img" :src="'img/avatar' + conversations[i].contactImg + '.jpg'" alt="">
 
                             <div class="info">
                                 <div :class="name">{{ contact.name }}</div>
-                                <div class="last-message">{{ contact.messages[2].message }}</div>
+                                <div class="last-message"> <!--{{ contact.messages[2].message }} --></div>
                             </div>
                             <div class="time">{{ contact.time }}</div>
                         </div>
@@ -95,20 +92,41 @@
 
                         <!-- :class="{my-message: message.sent, recived-message: !message.sent}"  TOFIX-->
                         <div class="conversation">
-                            
-                            <div v-for="message in conversations[activeChat].messages" 
-                            :class="(message.sent == true) ? 'my-message' : 'recived-message'"
-                            class="message">{{
-                                message.message }}<div class="time">{{ message.date }}</div>
+
+                            <div v-for="message in conversations[activeChat].messages"
+                                :class="(message.sent == true) ? 'my-message' : 'recived-message'" class="message">{{
+                                message.message }}
+                                <div class="time">{{ message.date }}</div>
+
+                                <!-- menu cancella  -->
+                                <div class="dropdown"> <!-- TOFIX non è dropdown  -->
+                                    <i @click="menuDeleteVisible(index)" class="fa-solid fa-angle-down"></i>
+                                    <div v-show="visible == conversations[activeChat].messages[index]"
+                                        >
+                                        <ul>
+                                            <li>info</li>
+                                            <li @click="deleteMessage(index)" class="delete">Cancella messaggio</li>
+                                        </ul>   
+                                    </div>
+                                </div>
                             </div>
-                           
+
+
+
+                            <!-- <i @click="menuVisible(i)" class="fa fa-chevron-down f-right"></i>
+
+                            <div @click="deleteMessage(i)">cancella messaggio</div> -->
+                            <!-- v-show="message.menuDropDown" -->
+                            <!-- v-show da display none  -->
+
+
                         </div>
 
                         <div class="insert-message flex">
-                            <i class="fa-solid fa-face-smile"></i>
+                            <i class="far fa-smile"></i>
 
                             <input type="text" class="textarea" placeholder="Scrivi un messaggio"
-                            v-model="newMessage.message" @keyup.enter="postSentMessage" />
+                                v-model="newMessage.message" @keyup.enter="postSentMessage" />
 
                             <i class="fa-solid fa-microphone"></i>
                         </div>
