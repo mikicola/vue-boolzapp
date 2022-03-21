@@ -155,6 +155,10 @@ body{
     position: relative; 
 }
 
+.contact:hover{
+    background-color: #f3f3f3;
+}
+
 /* .contact active */
 .active{
     background-color: #e9ebeb;

@@ -3,13 +3,14 @@ var app = new Vue({
     data:{
         // selectedMessage: 0,
         // searchName:'',
-        visible: true,
+        visibleDeleteMenu: true,
         newMessage:{
             message: '',
             sent: true,
         },
 
         activeChat: 0,
+        activeMenuIndex: null,
 
         mainUser:{
             name: 'Michela',
@@ -22,24 +23,25 @@ var app = new Vue({
                 contactImg: '_1',
                 time: '12:00',
                 visible: true,
+                // visibleMenu: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'si si',
                     sent: true, //io
-                    // menuDropDown: false,
+                    visibleMenu: true,
                 },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'no no',
                     sent: true, //io
-                    // menuDropDown: false,
+                    visibleMenu: true,
                 },
                     {
-                    date: '2020/10/01 16:15:22',
+                    date: '2020-10-01 16:15:22',
                     message: 'Certo, come no!',
                     sent: false, //contatto
-                    // menuDropDown: false,
+                    visibleMenu: true,
                 }
                 ]
             },
@@ -51,17 +53,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: "Hai portato a spasso l'orso?",
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'Ricordati lavare la lavastoviglie',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 16:15:22',
+                    date: '2020-10-01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -75,17 +77,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 16:15:22',
+                    date: '2020-10-01 16:15:22',
                     message: 'non mi va',
                     sent: false,
                     }
@@ -99,17 +101,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'Hai portato a spasso il topo?',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'Certo, come tutti i giorni...',
                     sent: false,
                     },
                     {
-                    date: '2020/10/01 16:15:22',
+                    date: '2020-10-01 16:15:22',
                     message: 'interessante!',
                     sent: true,
                     }
@@ -120,20 +122,20 @@ var app = new Vue({
                 name: 'Berlusconi',
                 contactImg: '_5',
                 time: '07:00',
-                visible: true,
+                visibleMenu: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'Mi consenta!',
                     sent: false,
                     },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'Sei sempre sul pezzo',
                     sent: true,
                     },
                     // {
-                    // date: '2020/10/01 16:15:22',
+                    // date: '2020-10-01 16:15:22',
                     // message: 'Tutto fatto!',
                     // sent: false,
                     // }
@@ -147,17 +149,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 16:15:22',
+                    date: '2020-10-01 16:15:22',
                     message: 'Tutto fatto!',
                     sent: false,
                     }
@@ -171,17 +173,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'Hai comprato le prugne?',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 15:50:00',
+                    date: '2020-10-01 15:50:00',
                     message: 'Ricordati di chiamare Fragola!',
                     sent: true,
                     },
                     {
-                    date: '2020/10/01 16:15:22',
+                    date: '2020-10-01 16:15:22',
                     message: 'Ho comprato solo i lamponi!',
                     sent: false,
                     }
@@ -195,17 +197,17 @@ var app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '2020/10/01 15:30:55',
+                    date: '2020-10-01 15:30:55',
                     message: 'Prugna ancora non mi ha chiamato...',
                     sent: false,
                     },
                     // {
-                    // date: '2020/10/01 15:50:00',
+                    // date: '2020-10-01 15:50:00',
                     // message: 'Ricordati di stendere i panni',
                     // sent: true,
                     // },
                     // {
-                    // date: '2020/10/01 16:15:22',
+                    // date: '2020-10-01 16:15:22',
                     // message: 'Tutto fatto!',
                     // sent: false,
                     // }
@@ -216,6 +218,7 @@ var app = new Vue({
     methods:{
         functionActiveChat(i) {
             this.activeChat = i;
+            this.activeMenuIndex = null //resetta il menu attivo al cambio della chat
         },
 
 
@@ -236,6 +239,19 @@ var app = new Vue({
         },
 
 
+        getFormattedDate(date, format){
+            let formatStr = 'dd/MM/yyyy HH:mm:ss';
+            switch(format){
+                case 'italian':
+                    formatStr = 'dd/MM/yyyy HH:mm:ss';
+                    break;
+                case 'american':
+                    formatStr = '/MM/dd/yyyy HH:mm:ss';
+            }
+            return luxon.DateTime.fromISO(date).toFormat(formatStr);
+        },
+
+
         functionSearchName(){
             this.conversations.forEach((item) =>{
                 if (item.name.toLowerCase().includes(this.searchName.toLowerCase())){
@@ -247,19 +263,29 @@ var app = new Vue({
         },
 
         //non funziona bene TOFIX
-        deleteMessage(index) {
-            this.conversations[this.activeChat].messages.splice(index, 1)
+        deleteMessage(messageIndex) {
+            this.conversations[this.activeChat].messages.splice(messageIndex, 1)
         },
+        
+        activateMenu(messageIndex){
+            if(this.activeMenuIndex == messageIndex){
+                this.activeMenuIndex = null
+                // confronto (==) e se la variabile è null => nessun menu aperto, else => attiva menu
+            }else{
+                this.activeMenuIndex = messageIndex;
+            }
+        },
+        
+        
+        /*
         menuDeleteVisible(index) {
-            if (this.visible == true) {
-                this.visible = this.conversations[this.activeChat].messages[index]
+            if (this.visibleDeleteMenu == true) {
+                this.visibleDeleteMenu = this.conversations[this.activeChat].messages[index]
             }
             else {
-                this.visible = true
+                this.visibleDeleteMenu = true
             }
-        }, 
-        
-
+        }, */ 
 /*
         deleteMessage(i) {
             this.conversations[this.activeChat].messages.splice(i, 1);
@@ -267,9 +293,3 @@ var app = new Vue({
         */
     }
 })
-
-/*
-Milestone 5
-Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
-Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
-*/
