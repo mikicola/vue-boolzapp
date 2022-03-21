@@ -61,12 +61,14 @@
 
                             <div class="info">
                                 <div :class="name">{{ contact.name }}</div>
-                                <!-- v-if serve per far eliminare il mess. Se l'arr non è vuoto mostra l'elemento  -->
-                                <div v-if="contact.messages.length != 0" class="last-message">{{ contact.messages[contact.messages.length -1].message }}</div>
+                                <!-- v-if serve per eliminare l'ultimo mess. Se l'arr non è vuoto mostra l'elemento  -->
+                                <!-- -1 per prendere l'elemento giusto nell'array  -->
+                                <div v-if="contact.messages.length != 0" class="last-message">{{
+                                    contact.messages[contact.messages.length -1].message }}</div>
                             </div>
-                            <div v-if="contact.messages.length != 0" class="time">{{ contact.messages[contact.messages.length -1].date }}</div>
+                            <div v-if="contact.messages.length != 0" class="time">{{
+                                contact.messages[contact.messages.length -1].date }}</div>
                             <!-- <div class="time">{{ getFormattedDate(contact.messages[contact.messages.length -1].date, 'italian') }}</div>  -->
-                            <!-- -1 per prendere l'elemento giusto nell'array  -->
                         </div>
 
                     </div>
@@ -103,15 +105,18 @@
                                 <div class="time">{{ getFormattedDate(message.date, 'italian') }}</div>
 
                                 <!-- menu cancella  -->
-                                <div class="dropdown"> <!-- TOFIX non è dropdown  -->
-                                    <!-- <i @click="menuDeleteVisible(index)" class="fa-solid fa-angle-down"></i> -->
+                                <div class="dropdown">
+                                    <!-- TOFIX non è dropdown  -->
                                     <i @click="activateMenu(messageIndex)" class="fa-solid fa-angle-down"></i>
-                                    <!-- <div v-show="visibleDeleteMenu == conversations[activeChat].messages[index]"> -->
-                                    <div v-show="messageIndex == activeMenuIndex">
-                                        <ul>
-                                            <li>info</li>
-                                            <li @click="deleteMessage(messageIndex)" class="delete">Cancella messaggio</li>
-                                        </ul>   
+
+                                    <div class="dropdown-content">
+                                        <div v-show="messageIndex == activeMenuIndex">
+                                            <ul>
+                                                <li>info</li>
+                                                <li @click="deleteMessage(messageIndex)" class="delete">Cancella
+                                                    messaggio</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

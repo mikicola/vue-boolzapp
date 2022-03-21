@@ -29,19 +29,19 @@ var app = new Vue({
                     date: '2020-10-01 15:30:55',
                     message: 'si si',
                     sent: true, //io
-                    visibleMenu: true,
+                    // visibleMenu: true,
                 },
                     {
                     date: '2020-10-01 15:50:00',
                     message: 'no no',
                     sent: true, //io
-                    visibleMenu: true,
+                    // visibleMenu: true,
                 },
                     {
                     date: '2020-10-01 16:15:22',
                     message: 'Certo, come no!',
                     sent: false, //contatto
-                    visibleMenu: true,
+                    // visibleMenu: true,
                 }
                 ]
             },
@@ -238,7 +238,7 @@ var app = new Vue({
             })
         },
 
-
+        // TOFIX 
         getFormattedDate(date, format){
             let formatStr = 'dd/MM/yyyy HH:mm:ss';
             switch(format){
@@ -262,8 +262,9 @@ var app = new Vue({
             })
         },
 
-        //non funziona bene TOFIX
+        
         deleteMessage(messageIndex) {
+            this.activeMenuIndex = null //resetta il menu attivo al click del cancella
             this.conversations[this.activeChat].messages.splice(messageIndex, 1)
         },
         
